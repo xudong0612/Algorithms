@@ -41,11 +41,15 @@ public class QuickFindUF {
 	}
 
 	public static void main(String[] args) {
-		System.out.println("Main");
 		int N = StdIn.readInt();
 		QuickFindUF qf = new QuickFindUF(N);
 		while(!StdIn.isEmpty()) {
 			int p = StdIn.readInt();
+			/* Terminal condition
+			if( p == -1) {
+				break;
+			}
+			*/
 			int q = StdIn.readInt();
 			if(qf.connected(p, q))
 				continue;
